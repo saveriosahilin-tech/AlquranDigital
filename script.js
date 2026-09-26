@@ -12,6 +12,104 @@ const TAJWEED_RULES = [
   { name: "iqlab", label: "Iqlab" },
   { name: "ikhfa", label: "Ikhfa" }
 ];
+const HADITH_ITEMS = [
+  {
+    theme: "Niat",
+    title: "Niat dalam amal",
+    arabic: "إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى",
+    meaning: "Nilai amal berkaitan dengan niat, dan setiap orang memperoleh sesuai niatnya.",
+    source: "Sahih al-Bukhari 1",
+    url: "https://sunnah.com/bukhari:1"
+  },
+  {
+    theme: "Akhlak",
+    title: "Menjaga lisan dan tangan",
+    arabic: "الْمُسْلِمُ مَنْ سَلِمَ الْمُسْلِمُونَ مِنْ لِسَانِهِ وَيَدِهِ",
+    meaning: "Seorang Muslim menjaga agar orang lain selamat dari gangguan lisan dan tangannya.",
+    source: "Sahih al-Bukhari 10",
+    url: "https://sunnah.com/bukhari:10"
+  },
+  {
+    theme: "Persaudaraan",
+    title: "Mencintai kebaikan bagi sesama",
+    arabic: "لَا يُؤْمِنُ أَحَدُكُمْ حَتَّى يُحِبَّ لِأَخِيهِ مَا يُحِبُّ لِنَفْسِهِ",
+    meaning: "Iman belum sempurna sampai seseorang menginginkan kebaikan bagi saudaranya seperti bagi dirinya.",
+    source: "Sahih al-Bukhari 13",
+    url: "https://sunnah.com/bukhari:13"
+  },
+  {
+    theme: "Adab",
+    title: "Berkata baik atau diam",
+    arabic: "مَنْ كَانَ يُؤْمِنُ بِاللَّهِ وَالْيَوْمِ الْآخِرِ فَلْيَقُلْ خَيْرًا أَوْ لِيَصْمُتْ",
+    meaning: "Orang yang beriman hendaknya memilih perkataan baik atau menahan diri.",
+    source: "Sahih al-Bukhari 6018",
+    url: "https://sunnah.com/bukhari:6018"
+  },
+  {
+    theme: "Al-Qur’an",
+    title: "Belajar dan mengajarkan Al-Qur’an",
+    arabic: "خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ",
+    meaning: "Di antara yang terbaik ialah orang yang belajar Al-Qur’an dan mengajarkannya.",
+    source: "Sahih al-Bukhari 5027",
+    url: "https://sunnah.com/bukhari:5027"
+  },
+  {
+    theme: "Berbuat baik",
+    title: "Menunjukkan jalan kebaikan",
+    arabic: "مَنْ دَلَّ عَلَى خَيْرٍ فَلَهُ مِثْلُ أَجْرِ فَاعِلِهِ",
+    meaning: "Orang yang menunjukkan suatu kebaikan mendapat pahala seperti orang yang melakukannya.",
+    source: "Sahih Muslim 1893a",
+    url: "https://sunnah.com/muslim:1893a"
+  },
+  {
+    theme: "Ilmu",
+    title: "Menempuh jalan mencari ilmu",
+    arabic: "وَمَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ",
+    meaning: "Siapa menempuh jalan untuk mencari ilmu, Allah memudahkan baginya jalan menuju surga.",
+    source: "Sahih Muslim 2699a",
+    url: "https://sunnah.com/muslim:2699a"
+  },
+  {
+    theme: "Mengendalikan diri",
+    title: "Kekuatan saat marah",
+    arabic: "لَيْسَ الشَّدِيدُ بِالصُّرَعَةِ، إِنَّمَا الشَّدِيدُ الَّذِي يَمْلِكُ نَفْسَهُ عِنْدَ الْغَضَبِ",
+    meaning: "Kuat bukan sekadar mampu mengalahkan orang lain, tetapi mampu mengendalikan diri ketika marah.",
+    source: "Sahih al-Bukhari 6114",
+    url: "https://sunnah.com/bukhari:6114"
+  },
+  {
+    theme: "Sedekah",
+    title: "Menyingkirkan gangguan dari jalan",
+    arabic: "وَيُمِيطُ الْأَذَى عَنِ الطَّرِيقِ صَدَقَةٌ",
+    meaning: "Menyingkirkan sesuatu yang membahayakan dari jalan termasuk sedekah.",
+    source: "Sahih al-Bukhari 2989",
+    url: "https://sunnah.com/bukhari:2989"
+  },
+  {
+    theme: "Persaudaraan",
+    title: "Tidak menzalimi sesama Muslim",
+    arabic: "الْمُسْلِمُ أَخُو الْمُسْلِمِ، لَا يَظْلِمُهُ وَلَا يُسْلِمُهُ",
+    meaning: "Seorang Muslim adalah saudara bagi Muslim lain; ia tidak menzalimi atau membiarkannya dizalimi.",
+    source: "Sahih al-Bukhari 2442",
+    url: "https://sunnah.com/bukhari:2442"
+  },
+  {
+    theme: "Kasih sayang",
+    title: "Kaum beriman seperti satu tubuh",
+    arabic: "مَثَلُ الْمُؤْمِنِينَ فِي تَوَادِّهِمْ وَتَرَاحُمِهِمْ وَتَعَاطُفِهِمْ مَثَلُ الْجَسَدِ",
+    meaning: "Dalam kasih sayang dan kepedulian, kaum beriman diibaratkan seperti satu tubuh.",
+    source: "Sahih Muslim 2586a",
+    url: "https://sunnah.com/muslim:2586a"
+  },
+  {
+    theme: "Akhlak",
+    title: "Keutamaan akhlak yang baik",
+    arabic: "إِنَّ خِيَارَكُمْ أَحَاسِنُكُمْ أَخْلَاقًا",
+    meaning: "Orang-orang terbaik adalah mereka yang paling baik akhlaknya.",
+    source: "Sahih al-Bukhari 6035",
+    url: "https://sunnah.com/bukhari:6035"
+  }
+];
 const ARABIC_SCRIPT_PATTERN = /\p{Script=Arabic}/u;
 const LETTER_PATTERN = /\p{Letter}/u;
 const elements = {
@@ -19,7 +117,8 @@ const elements = {
   views: {
     quran: document.querySelector("#quran-view"),
     mentor: document.querySelector("#mentor-view"),
-    ibadah: document.querySelector("#ibadah-view")
+    ibadah: document.querySelector("#ibadah-view"),
+    history: document.querySelector("#history-view")
   },
   surahList: document.querySelector("#surah-list"),
   surahStatus: document.querySelector("#surah-status"),
@@ -39,8 +138,26 @@ const elements = {
   qiblaBearing: document.querySelector("#qibla-bearing"),
   qiblaIndicator: document.querySelector("#qibla-indicator"),
   qiblaStatus: document.querySelector("#qibla-status"),
-  dhikrList: document.querySelector("#dhikr-list")
+  dhikrList: document.querySelector("#dhikr-list"),
+  hadithList: document.querySelector("#hadith-list"),
+  hadithSearch: document.querySelector("#hadith-search"),
+  hadithCount: document.querySelector("#hadith-count"),
+  hadithThemeFilter: document.querySelector("#hadith-theme-filter"),
+  hadithScopeButtons: document.querySelectorAll("[data-hadith-scope]"),
+  savedHadithCount: document.querySelector("#saved-hadith-count")
 };
+
+const SAVED_HADITHS_KEY = "always-alquran-saved-hadiths";
+
+function readSavedHadithSources() {
+  try {
+    const storedSources = JSON.parse(window.localStorage.getItem(SAVED_HADITHS_KEY) || "[]");
+    const knownSources = new Set(HADITH_ITEMS.map((hadith) => hadith.source));
+    return Array.isArray(storedSources) ? storedSources.filter((source) => knownSources.has(source)) : [];
+  } catch {
+    return [];
+  }
+}
 
 const state = {
   surahs: [],
@@ -54,7 +171,9 @@ const state = {
   activeSpeechButton: null,
   qiblaBearing: null,
   deviceHeading: null,
-  orientationListening: false
+  orientationListening: false,
+  savedHadithSources: new Set(readSavedHadithSources()),
+  hadithScope: "all"
 };
 
 const KAABA_LATITUDE = 21.422487;
@@ -177,6 +296,102 @@ function handleDhikrAction(event) {
   item.classList.toggle("is-complete", count === target);
   item.querySelector(".dhikr-count").innerHTML = `${count} <span>/ ${target}</span>`;
   item.querySelector('[data-action="increment"]').disabled = count === target;
+}
+
+function renderHadithCollection() {
+  const query = elements.hadithSearch.value.trim().toLocaleLowerCase("id");
+  const selectedTheme = elements.hadithThemeFilter.value;
+  const matchingHadiths = HADITH_ITEMS.filter((hadith) =>
+    (selectedTheme === "" || hadith.theme === selectedTheme) &&
+    (state.hadithScope === "all" || state.savedHadithSources.has(hadith.source)) &&
+    `${hadith.theme} ${hadith.title} ${hadith.arabic} ${hadith.meaning} ${hadith.source}`
+      .toLocaleLowerCase("id").includes(query)
+  );
+  elements.hadithList.replaceChildren();
+  elements.hadithCount.textContent = `${matchingHadiths.length} dari ${HADITH_ITEMS.length} hadis`;
+  elements.savedHadithCount.textContent = state.savedHadithSources.size;
+  elements.hadithScopeButtons.forEach((button) => {
+    const isActive = button.dataset.hadithScope === state.hadithScope;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+
+  if (matchingHadiths.length === 0) {
+    const emptyMessage = document.createElement("p");
+    emptyMessage.className = "hadith-empty";
+    emptyMessage.textContent = state.hadithScope === "saved" && state.savedHadithSources.size === 0
+      ? "Belum ada hadis tersimpan. Simpan hadis dengan tombol bintang pada kartunya."
+      : "Tidak ada hadis yang cocok dengan filter ini.";
+    elements.hadithList.append(emptyMessage);
+    return;
+  }
+
+  matchingHadiths.forEach((hadith) => {
+    const card = document.createElement("article");
+    card.className = "hadith-card";
+    const header = document.createElement("div");
+    header.className = "hadith-card-heading";
+    const titleBlock = document.createElement("div");
+    titleBlock.className = "hadith-title-block";
+    const theme = document.createElement("span");
+    theme.className = "hadith-theme";
+    theme.textContent = hadith.theme;
+    const title = document.createElement("h3");
+    title.textContent = hadith.title;
+    titleBlock.append(theme, title);
+    const isSaved = state.savedHadithSources.has(hadith.source);
+    const saveButton = document.createElement("button");
+    saveButton.className = "hadith-save-button";
+    saveButton.type = "button";
+    saveButton.dataset.saveHadith = hadith.source;
+    saveButton.setAttribute("aria-pressed", String(isSaved));
+    saveButton.setAttribute("aria-label", `${isSaved ? "Hapus dari" : "Simpan ke"} hadis tersimpan: ${hadith.title}`);
+    saveButton.title = isSaved ? "Hapus dari hadis tersimpan" : "Simpan hadis";
+    saveButton.textContent = isSaved ? "★" : "☆";
+    header.append(titleBlock, saveButton);
+    const arabic = document.createElement("p");
+    arabic.className = "hadith-arabic";
+    arabic.lang = "ar";
+    arabic.dir = "rtl";
+    arabic.textContent = hadith.arabic;
+    const meaning = document.createElement("p");
+    meaning.className = "hadith-meaning";
+    meaning.textContent = hadith.meaning;
+    const source = document.createElement("a");
+    source.className = "hadith-source";
+    source.href = hadith.url;
+    source.target = "_blank";
+    source.rel = "noopener noreferrer";
+    source.textContent = `Rujukan: ${hadith.source} ↗`;
+    card.append(header, arabic, meaning, source);
+    elements.hadithList.append(card);
+  });
+}
+
+function populateHadithThemes() {
+  const themes = [...new Set(HADITH_ITEMS.map((hadith) => hadith.theme))].sort((first, second) => first.localeCompare(second, "id"));
+  themes.forEach((theme) => {
+    const option = document.createElement("option");
+    option.value = theme;
+    option.textContent = theme;
+    elements.hadithThemeFilter.append(option);
+  });
+}
+
+function saveHadithSource(source) {
+  if (state.savedHadithSources.has(source)) state.savedHadithSources.delete(source);
+  else state.savedHadithSources.add(source);
+  try {
+    window.localStorage.setItem(SAVED_HADITHS_KEY, JSON.stringify([...state.savedHadithSources]));
+  } catch (error) {
+    console.warn("Simpanan hadis hanya tersedia selama halaman terbuka:", error);
+  }
+  renderHadithCollection();
+}
+
+function handleHadithListClick(event) {
+  const saveButton = event.target.closest("button[data-save-hadith]");
+  if (saveButton) saveHadithSource(saveButton.dataset.saveHadith);
 }
 
 async function fetchJson(path) {
@@ -832,5 +1047,14 @@ elements.nextQuestion.addEventListener("click", startQuestion);
 elements.restartQuiz.addEventListener("click", restartQuiz);
 elements.qiblaButton.addEventListener("click", activateQiblaCompass);
 elements.dhikrList.addEventListener("click", handleDhikrAction);
+elements.hadithSearch.addEventListener("input", renderHadithCollection);
+elements.hadithThemeFilter.addEventListener("change", renderHadithCollection);
+elements.hadithScopeButtons.forEach((button) => button.addEventListener("click", () => {
+  state.hadithScope = button.dataset.hadithScope;
+  renderHadithCollection();
+}));
+elements.hadithList.addEventListener("click", handleHadithListClick);
 
+populateHadithThemes();
+renderHadithCollection();
 loadSurahs();

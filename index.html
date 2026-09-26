@@ -18,6 +18,7 @@
 			<button class="nav-tab is-active" type="button" data-view="quran" aria-current="page">Al-Qur’an</button>
 			<button class="nav-tab" type="button" data-view="mentor">Mentor Murajaah</button>
 			<button class="nav-tab" type="button" data-view="ibadah">Ibadah Harian</button>
+			<button class="nav-tab" type="button" data-view="history">Sejarah & Hadis</button>
 		</nav>
 		<div class="topbar-note"><span class="live-dot"></span>Belajar dengan tenang</div>
 	</header>
@@ -191,6 +192,80 @@
 						<p class="wudhu-note">Ini ringkasan umum. Ikuti urutan dan tuntunan yang diajarkan guru atau keluarga.</p>
 					</section>
 				</div>
+			</section>
+
+			<section class="view" id="history-view" aria-labelledby="history-heading" hidden>
+				<div class="page-intro">
+					<div>
+						<p class="eyebrow">JEJAK DAN TELADAN</p>
+						<h1 id="history-heading">Sejarah & Hadis</h1>
+						<p class="intro-copy">Kisah ringkas dan hadis pilihan beserta rujukannya.</p>
+					</div>
+					<div class="history-intro-mark" aria-hidden="true">سِيَر</div>
+				</div>
+
+				<section class="history-section" aria-labelledby="stories-heading">
+					<div class="collection-heading">
+						<div><p class="eyebrow">LINIMASA</p><h2 id="stories-heading">Kisah Sejarah Islam</h2></div>
+						<span class="collection-count">5 kisah</span>
+					</div>
+					<div class="history-grid">
+						<article class="history-card">
+							<p class="history-date">1 H · 622 M</p>
+							<h3>Hijrah ke Madinah</h3>
+							<p>Ketika tekanan di Makkah meningkat, Nabi Muhammad dan para sahabat berhijrah ke Yatsrib, yang kemudian dikenal sebagai Madinah. Peristiwa hijrah menjadi titik acuan penanggalan Hijriah.</p>
+							<p class="history-source">Rujukan: <a href="https://quran.com/9/40" target="_blank" rel="noopener noreferrer">QS At-Taubah 9:40</a> · Sirah Ibn Hisham</p>
+						</article>
+						<article class="history-card">
+							<p class="history-date">2 H · 624 M</p>
+							<h3>Perang Badar</h3>
+							<p>Kaum Muslimin dan Quraisy bertemu di Badar dalam salah satu peristiwa penting awal komunitas Muslim. Al-Qur’an mengingatkan pertolongan Allah di Badar ketika kaum Muslimin berada dalam keadaan lemah.</p>
+							<p class="history-source">Rujukan: <a href="https://quran.com/3/123" target="_blank" rel="noopener noreferrer">QS Ali ‘Imran 3:123</a> · Sirah Ibn Hisham</p>
+						</article>
+						<article class="history-card">
+							<p class="history-date">3 H · 625 M</p>
+							<h3>Peristiwa Uhud</h3>
+							<p>Di Uhud, kaum Muslimin menghadapi ujian berat. QS Ali ‘Imran 3:152 mengaitkan peristiwa itu dengan pelajaran tentang ketaatan, keteguhan, dan evaluasi diri.</p>
+							<p class="history-source">Rujukan: <a href="https://quran.com/3/152" target="_blank" rel="noopener noreferrer">QS Ali ‘Imran 3:152</a> · Sirah Ibn Hisham</p>
+						</article>
+						<article class="history-card">
+							<p class="history-date">6 H · 628 M</p>
+							<h3>Perjanjian Hudaibiyah</h3>
+							<p>Rombongan Nabi berangkat dari Madinah dengan tujuan berumrah, lalu tercapai kesepakatan damai dengan Quraisy. Masa damai membuka ruang hubungan yang lebih luas antara kedua pihak.</p>
+							<p class="history-source">Rujukan: <a href="https://quran.com/48/1" target="_blank" rel="noopener noreferrer">QS Al-Fath 48:1</a> · Sirah Ibn Hisham</p>
+						</article>
+						<article class="history-card">
+							<p class="history-date">8 H · 630 M</p>
+							<h3>Fathu Makkah</h3>
+							<p>Kaum Muslimin memasuki Makkah setelah rangkaian peristiwa yang mengakhiri perjanjian Hudaibiyah. Fathu Makkah menjadi titik penting dalam sejarah awal Islam.</p>
+							<p class="history-source">Rujukan: Sirah Ibn Hisham · QS An-Nasr 110:1–3</p>
+						</article>
+					</div>
+				</section>
+
+				<section class="hadith-section" aria-labelledby="hadith-heading">
+					<div class="collection-heading">
+						<div><p class="eyebrow">PETIKAN TERPILIH</p><h2 id="hadith-heading">Kumpulan Hadis</h2></div>
+						<span class="collection-count" id="hadith-count" role="status">Memuat hadis…</span>
+					</div>
+					<div class="hadith-toolbar">
+						<label class="search-field hadith-search-field">
+							<span class="search-icon" aria-hidden="true">⌕</span>
+							<span class="visually-hidden">Cari hadis</span>
+							<input id="hadith-search" type="search" placeholder="Cari tema, makna, atau sumber hadis…" autocomplete="off">
+						</label>
+						<label class="visually-hidden" for="hadith-theme-filter">Filter tema hadis</label>
+						<select class="hadith-theme-filter" id="hadith-theme-filter">
+							<option value="">Semua tema</option>
+						</select>
+						<div class="hadith-scope-switch" role="group" aria-label="Filter hadis tersimpan">
+							<button class="is-active" type="button" data-hadith-scope="all" aria-pressed="true">Semua</button>
+							<button type="button" data-hadith-scope="saved" aria-pressed="false">Disimpan <span id="saved-hadith-count">0</span></button>
+						</div>
+					</div>
+					<div class="hadith-grid" id="hadith-list" aria-live="polite"></div>
+					<p class="hadith-note">Teks Arab merupakan petikan dari riwayat yang dirujuk; makna Indonesia adalah ringkasan. Favorit hanya tersimpan di browser ini.</p>
+				</section>
 			</section>
 	</main>
 
